@@ -1,7 +1,7 @@
 YOCView
 =========
 
-Why are there view controllers?
+In a lot fo scenarios, controllers get in the way and cause to you add a lot of unnecessary delegates and callbacks.
 
 # Podfile
 
@@ -64,7 +64,7 @@ Then in your main view you can push, pop, present, dismiss without worrying abou
 
 # View Notifications
 
-YOCView has the following notifications:
+`YOCView` has the following notifications:
 
 ```objc
 // Same as UIViewController notifications
@@ -89,6 +89,10 @@ YOCView has the following notifications:
 - (void)viewDidAppearAfterLoad:(BOOL)animated;
 ```
 
+# Example Project
+
+The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/YOCView/YOCView/tree/master/Example). 
+
 # FAQ
 
 ## What if I need to access the view's controller?
@@ -99,6 +103,3 @@ In your view, `self.viewController` will return the view controller it's in.
 
 This allows support for (YOLayout)[https://github.com/YOLayout/YOLayout]. But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
 
-# Example Project
-
-The best way to follow and learn YOCView is by seeing it in action. Open the example project: [Example](https://github.com/YOCView/YOCView/tree/master/Example). 
