@@ -1,7 +1,9 @@
 YOCView
 =========
 
-In a lot fo scenarios, controllers get in the way and cause to you add a lot of unnecessary delegates and callbacks.
+A view controller in UIKit is a wrapper around a single view that provides notifications (appear, disappear, etc) and some state (orientation, navigation item, etc). Because of this extra layer, it can cause you to write a lot of delegate and callback code in order to coordinate between views that are nested in separate view controllers. YOCView elimintates this layer.
+
+But is this taking the C out of MVC? Not really. The view class is (C), and how it renders itself (`drawRect:`) is (V), and any data models would be the (M).
 
 # Podfile
 
