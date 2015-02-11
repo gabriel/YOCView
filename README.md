@@ -13,8 +13,6 @@ pod "YOCView"
 
 Instead of making a view controller with a content view, just create your content view by subclassing YOCView.
 
-This content view should subclass YOCView.
-
 ```objc
 #import <YOCView/YOCView.h>
 
@@ -22,11 +20,16 @@ This content view should subclass YOCView.
 @end
 ```
 
-In the app delegate its important to setup the root view controller using `YOCView#viewControllerForView`.
+In the `AppDelegate` its important to setup the root view controller:
 
 ```objc
-MainView *mainView = [[MainView alloc] init];
-self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[YOCView viewControllerForView:mainView]];
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  MainView *mainView = [[MainView alloc] init];
+  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[YOCView viewControllerForView:mainView]];
+  
+}
 ```
 
 Then in your main view you can push, pop, present, dismiss without worrying about view controllers.
@@ -34,14 +37,26 @@ Then in your main view you can push, pop, present, dismiss without worrying abou
 ```objc
 @implementation MyView
 
-- (void)someAction {
+- (void)pushAView {
   MyView *view = [[MyView alloc] init];
   [self.navigation pushView:view animated:YES];
 }
 
-- (void)someActionForModal {
+- (void)presentAView {
   MyView *view = [[MyView alloc] init];
   [self.navigation presentView:view animated:YES];
+}
+
+- (void)popMyself {
+  [self.navigation popViewAnimated:YES];
+}
+
+- (void)popToRoot {
+  [self.navigation popToRootViewAnimated:YES];
+}
+
+- (void)dismissMyself {
+  [self.navigation dismissAnimated:YES];
 }
 
 @end
@@ -78,7 +93,7 @@ YOCView has the following notifications:
 
 ## What if I need to access the view's controller?
 
-`self.viewController` will return the view controller it's contained in.
+In your view, `self.viewController` will return the view controller it's in.
 
 ## Why does YOCView subclass YOView?
 
