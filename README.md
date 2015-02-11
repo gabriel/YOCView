@@ -34,7 +34,7 @@ In the `AppDelegate` its important to setup the root view controller:
 }
 ```
 
-Then in your main view you can push, pop, present, dismiss without worrying about view controllers.
+Then in your view you can push, pop, present, dismiss without worrying about view controllers.
 
 ```objc
 @implementation MyView
