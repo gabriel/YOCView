@@ -101,9 +101,9 @@ The best way to follow and learn `YOCView` is by seeing it in action. Open the e
 
 # FAQ
 
-## What if I need to access the view's controller?
+## What if I need to access the view's UIViewController?
 
-In your view, `self.viewController` will return the view controller it's in.
+In your view, `self.viewController` will return the UIViewController it's in.
 
 ## Why does YOCView subclass YOView?
 
