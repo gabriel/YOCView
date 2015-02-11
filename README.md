@@ -103,5 +103,5 @@ In your view, `self.viewController` will return the view controller it's in.
 
 ## Why does YOCView subclass YOView?
 
-This allows support for (YOLayout)[https://github.com/YOLayout/YOLayout]. But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
+This allows support for [YOLayout](https://github.com/YOLayout/YOLayout). But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
 
