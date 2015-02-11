@@ -63,21 +63,17 @@
     if (_navigationTitle) [self setNavigationTitle:_navigationTitle];
     if (_navigationBackTitle) [self setNavigationBackTitle:_navigationBackTitle];
 
-    switch (_presentationMode) {
-      case YOCViewPresentationModeModal: {
-        UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(_dismiss)];
-        self.navigation.navigationItem.leftBarButtonItem = closeItem;
-      }
-        break;
-      case YOCViewPresentationModeHideNavigation:
-        [self.navigation.viewController.navigationController setNavigationBarHidden:YES];
-        break;
-      case YOCViewPresentationModeDefault: {
-        UINavigationController *navigationController = self.navigation.viewController.navigationController;
-        if (navigationController.navigationBarHidden) {
-          [navigationController setNavigationBarHidden:NO];
-        }
-        break;
+    if ((_viewOptions & YOCViewOptionsModal) != 0) {
+      UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(_dismiss)];
+      self.navigation.navigationItem.leftBarButtonItem = closeItem;
+    }
+
+    if ((_viewOptions & YOCViewOptionsHideNavigation) != 0) {
+      [self.navigation.viewController.navigationController setNavigationBarHidden:YES];
+    } else {
+      UINavigationController *navigationController = self.navigation.viewController.navigationController;
+      if (navigationController.navigationBarHidden) {
+        [navigationController setNavigationBarHidden:NO];
       }
     }
   }
@@ -89,12 +85,8 @@
 
 - (void)_viewWillDisappear:(BOOL)animated resigning:(BOOL)resigning {
   if (!resigning) {
-    switch (_presentationMode) {
-      case YOCViewPresentationModeHideNavigation: {
-        [self.navigation.viewController.navigationController setNavigationBarHidden:NO animated:NO]; // No animated for a good reason (can't remember it tho)
-      }
-        break;
-        default: break;
+    if ((_viewOptions & YOCViewOptionsHideNavigation) != 0) {
+      [self.navigation.viewController.navigationController setNavigationBarHidden:NO animated:NO]; // No animated for a good reason (can't remember it tho)
     }
   }
   _visible = NO;

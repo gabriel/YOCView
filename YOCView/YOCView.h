@@ -12,10 +12,10 @@
 
 #import <YOLayout/YOLayout.h>
 
-typedef NS_ENUM (NSUInteger, YOCViewPresentationMode) {
-  YOCViewPresentationModeDefault = 0,
-  YOCViewPresentationModeModal = 1 << 0,
-  YOCViewPresentationModeHideNavigation = 1 << 1,
+typedef NS_ENUM (NSUInteger, YOCViewOptions) {
+  YOCViewOptionsNone = 0,
+  YOCViewOptionsModal = 1 << 0,
+  YOCViewOptionsHideNavigation = 1 << 1,
 };
 
 @protocol YONavigation <NSObject>
@@ -46,7 +46,7 @@ typedef NS_ENUM (NSUInteger, YOCViewPresentationMode) {
 @property (weak) id<YONavigation> navigation;
 @property (nonatomic) NSString *navigationTitle;
 @property (nonatomic) NSString *navigationBackTitle;
-@property YOCViewPresentationMode presentationMode;
+@property YOCViewOptions viewOptions;
 
 + (UIViewController *)viewControllerForView:(YOCView *)view;
 

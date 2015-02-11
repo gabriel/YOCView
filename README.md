@@ -59,6 +59,12 @@ Then in your view you can push, pop, present, dismiss without worrying about vie
   [self.navigation dismissAnimated:YES];
 }
 
+- (void)pushAViewHideNav {
+  MyView *view = [[MyView alloc] init];
+  view.viewOptions = YOCViewOptionsHideNavigation;
+  [self.navigation pushView:view animated:YES];
+}
+
 @end
 ```
 

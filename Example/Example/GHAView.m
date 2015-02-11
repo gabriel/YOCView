@@ -63,7 +63,7 @@
   [presentSplashView setName:@"Push (no navigation bar)" description:nil image:nil];
   presentSplashView.action = ^{
     GHAView *view = [[GHAView alloc] init];
-    view.presentationMode = YOCViewPresentationModeHideNavigation;
+    view.viewOptions = YOCViewOptionsHideNavigation;
     [self.navigation pushView:view animated:YES];
   };
 

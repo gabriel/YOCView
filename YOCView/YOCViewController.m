@@ -111,9 +111,7 @@
 //}
 
 - (id<YONavigation>)presentView:(YOCView *)view animated:(BOOL)animated completion:(void (^)(void))completion {
-  if (view.presentationMode != YOCViewPresentationModeHideNavigation) {
-    view.presentationMode = YOCViewPresentationModeModal;
-  }
+  view.viewOptions = view.viewOptions | YOCViewOptionsModal;
   YOCViewController *viewController = [[YOCViewController alloc] initWithView:view];
   UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
   [self presentViewController:navigationController animated:animated completion:completion];
