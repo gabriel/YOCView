@@ -1,7 +1,7 @@
 YOCView
 =========
 
-A view controller in UIKit is a wrapper around a single view that provides notifications (appear, disappear, etc) and some state (orientation, navigation item, etc). Because of this extra layer, it can cause you to write a lot of delegate and callback code in order to coordinate between views that are in different view controllers. YOCView elimintates this view controller layer.
+YOCView helps you avoid view controllers. A view controller in UIKit is a wrapper around a single view that provides notifications (appear, disappear, etc) and some state (orientation, navigation item, etc). Because of this extra layer, it can cause you to write a lot of delegate and callback code in order to coordinate between views. YOCView help to eliminate this view controller layer.
 
 # Podfile
 
@@ -20,7 +20,7 @@ Instead of making a view controller with a content view, just create your conten
 @end
 ```
 
-In the `AppDelegate` its important to setup the root view controller:
+In the `AppDelegate` you can setup the root view controller with your main view like this:
 
 ```objc
 
@@ -111,4 +111,4 @@ This allows support for [YOLayout](https://github.com/YOLayout/YOLayout). But yo
 
 ## But isn't this taking the C out of MVC? 
 
-Not really. The V in MVC is really about how the view draws itself not about how the class is named. You can still have separation of concerns without creating awkward class hierarchies or compositions.
+No.
