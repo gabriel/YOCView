@@ -1,0 +1,35 @@
+PODS:
+  - GHKit (1.0.21)
+  - GHUITable (0.0.2):
+    - GHKit
+    - ObjectiveSugar
+  - ObjectiveSugar (1.1.0)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - YOCView (0.1.1):
+    - YOLayout (~> 0.1.3)
+  - YOLayout (0.1.4)
+
+DEPENDENCIES:
+  - GHKit
+  - GHUITable (from `../../GHUITable`)
+  - ObjectiveSugar
+  - SDWebImage
+  - YOCView (from `../../YOCView/`)
+
+EXTERNAL SOURCES:
+  GHUITable:
+    :path: ../../GHUITable
+  YOCView:
+    :path: ../../YOCView/
+
+SPEC CHECKSUMS:
+  GHKit: b6f2b698849faca1156a6e64d19efa4195147277
+  GHUITable: 7fb3012083b46af5b782892b09926f092cf1ac77
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  YOCView: b3577943e2206ec5d0645a656257421d9f4a06d8
+  YOLayout: d082f2348d374bccab7f7c6b2d69b999c95e4c3a
+
+COCOAPODS: 0.35.0

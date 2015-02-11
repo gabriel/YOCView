@@ -1,0 +1,10 @@
+PODS:
+  - YOLayout (0.1.4)
+
+DEPENDENCIES:
+  - YOLayout
+
+SPEC CHECKSUMS:
+  YOLayout: d082f2348d374bccab7f7c6b2d69b999c95e4c3a
+
+COCOAPODS: 0.35.0

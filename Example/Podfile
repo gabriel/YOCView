@@ -1,0 +1,9 @@
+platform :ios, "7.0"
+
+pod "YOCView", :path => "../../YOCView/"
+
+pod "GHKit"
+pod "ObjectiveSugar"
+pod "GHUITable", :path => "../../GHUITable"
+pod "SDWebImage"
+
