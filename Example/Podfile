@@ -4,6 +4,6 @@ pod "YOCView", :path => "../../YOCView/"
 
 pod "GHKit"
 pod "ObjectiveSugar"
-pod "GHUITable", :path => "../../GHUITable"
+pod "GHUITable"
 pod "SDWebImage"
 

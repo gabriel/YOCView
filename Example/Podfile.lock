@@ -1,35 +1,51 @@
 PODS:
+  - CocoaLumberjack (1.9.2):
+    - CocoaLumberjack/Extensions (= 1.9.2)
+  - CocoaLumberjack/Core (1.9.2)
+  - CocoaLumberjack/Extensions (1.9.2):
+    - CocoaLumberjack/Core
   - GHKit (1.0.21)
-  - GHUITable (0.0.2):
+  - GHUITable (0.0.3):
+    - GHKit
+    - GHUITable/Yap (= 0.0.3)
+    - ObjectiveSugar
+  - GHUITable/Yap (0.0.3):
     - GHKit
     - ObjectiveSugar
+    - YapDatabase
   - ObjectiveSugar (1.1.0)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
+  - YapDatabase (2.5.4):
+    - YapDatabase/standard (= 2.5.4)
+  - YapDatabase/common (2.5.4):
+    - CocoaLumberjack (~> 1)
+  - YapDatabase/standard (2.5.4):
+    - YapDatabase/common
   - YOCView (0.1.1):
     - YOLayout (~> 0.1.3)
   - YOLayout (0.1.4)
 
 DEPENDENCIES:
   - GHKit
-  - GHUITable (from `../../GHUITable`)
+  - GHUITable
   - ObjectiveSugar
   - SDWebImage
   - YOCView (from `../../YOCView/`)
 
 EXTERNAL SOURCES:
-  GHUITable:
-    :path: ../../GHUITable
   YOCView:
     :path: ../../YOCView/
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 205769c032b5fef85b92472046bcc8b7e7c8a817
   GHKit: b6f2b698849faca1156a6e64d19efa4195147277
-  GHUITable: 7fb3012083b46af5b782892b09926f092cf1ac77
+  GHUITable: de592248b25a3a4d59ef6afc8ea25486555ec368
   ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  YOCView: b3577943e2206ec5d0645a656257421d9f4a06d8
+  YapDatabase: c1d6912df1b4a160f7373ee7657d360e29bb00fd
+  YOCView: 956c44dcecb24a814846cad59c8c72fbc204a836
   YOLayout: d082f2348d374bccab7f7c6b2d69b999c95e4c3a
 
 COCOAPODS: 0.35.0
