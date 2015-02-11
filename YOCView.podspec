@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   s.name         = "YOCView"
   s.version      = "0.1.1"
   s.summary      = "Taking away view controllers."
-  s.homepage     = "https://github.com/YOCView/YOCView"
+  s.homepage     = "https://github.com/gabriel/YOCView"
   s.license      = "MIT"
   s.authors      = { "Gabriel Handford" => "gabrielh@gmail.com" }
-  s.source       = { :git => "https://github.com/YOCView/YOCView.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/gabriel/YOCView.git", :tag => s.version.to_s }
 
   s.requires_arc = true
 
