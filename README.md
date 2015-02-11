@@ -3,8 +3,6 @@ YOCView
 
 A view controller in UIKit is a wrapper around a single view that provides notifications (appear, disappear, etc) and some state (orientation, navigation item, etc). Because of this extra layer, it can cause you to write a lot of delegate and callback code in order to coordinate between views that are in different view controllers. YOCView elimintates this view controller layer.
 
-But is this taking the C out of MVC? Not really. The view class is (C), and how it renders itself (`drawRect:`) is (V), and any data models would be the (M).
-
 # Podfile
 
 ```ruby
@@ -105,3 +103,6 @@ In your view, `self.viewController` will return the view controller it's in.
 
 This allows support for [YOLayout](https://github.com/YOLayout/YOLayout). But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
 
+## But isn't this taking the C out of MVC? 
+
+Not really. The V in MVC is really about how the view draws itself not about how the class is named. You can still have separation of concerns without creating awkward class hierarchies or compositions.
