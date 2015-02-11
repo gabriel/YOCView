@@ -93,7 +93,7 @@ Then in your view you can push, pop, present, dismiss without worrying about vie
 
 # Example Project
 
-The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/YOCView/YOCView/tree/master/Example). 
+The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/gabriel/YOCView/tree/master/Example). 
 
 # FAQ
 
