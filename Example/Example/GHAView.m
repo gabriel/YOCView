@@ -59,6 +59,14 @@
     [self.navigation presentView:view animated:YES completion:nil];
   };
 
+  GHUITextImageView *presentSplashView = [[GHUITextImageView alloc] init];
+  [presentSplashView setName:@"Push (no navigation bar)" description:nil image:nil];
+  presentSplashView.action = ^{
+    GHAView *view = [[GHAView alloc] init];
+    view.presentationMode = YOCViewPresentationModeHideNavigation;
+    [self.navigation pushView:view animated:YES];
+  };
+
 //  GHUITextImageView *presentModalView = [[GHUITextImageView alloc] init];
 //  [presentModalView setName:@"Present (Popover)" description:nil image:nil];
 //  presentModalView.action = ^{
@@ -73,7 +81,7 @@
   };
 
   [_tableView.dataSource addObjects:@[pushView, popView, popToRootView] section:0];
-  [_tableView.dataSource addObjects:@[presentView, dismissView] section:1];
+  [_tableView.dataSource addObjects:@[presentView, presentSplashView, dismissView] section:1];
 
   _tableView.dataSource.selectBlock = ^(UITableView *tableView, NSIndexPath *indexPath, GHUITextImageView *view) {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

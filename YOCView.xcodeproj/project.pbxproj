@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0004F0EB1A8B1BDD00CFCA23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		003BAAC91A80941600C309B9 /* YOCView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YOCView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		003BAACD1A80941600C309B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003BAAE51A80945F00C309B9 /* YOCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOCView.h; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		003BAABF1A80941600C309B9 = {
 			isa = PBXGroup;
 			children = (
+				0004F0EB1A8B1BDD00CFCA23 /* README.md */,
 				00B543FF1A82B0780044CC5B /* YOCView.podspec */,
 				00B544001A82B0780044CC5B /* Podfile */,
 				003BAACB1A80941600C309B9 /* YOCView */,
