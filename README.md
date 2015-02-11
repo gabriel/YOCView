@@ -20,19 +20,7 @@ Instead of making a view controller with a content view, just create your conten
 @end
 ```
 
-In the `AppDelegate` you can setup the root view controller with your main view like this:
-
-```objc
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-  MainView *mainView = [[MainView alloc] init];
-  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[YOCView viewControllerForView:mainView]];
-  
-}
-```
-
-Then in your view you can push, pop, present, dismiss without worrying about view controllers.
+Then within your view you can push, pop, present, dismiss without worrying about view controllers.
 
 ```objc
 @implementation MyView
@@ -68,6 +56,38 @@ Then in your view you can push, pop, present, dismiss without worrying about vie
 @end
 ```
 
+To make a view the content for a window you can use `setRootNavigationOnWindow:`.
+
+```objc
+MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
+[mainView setRootNavigationOnWindow:self.window]; // Sets the main view on the window
+```
+
+Here is an example of an `AppDelegate` that has a log in and main view.
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  if (loggedIn) {
+    [self showMainView];
+  } else {
+    LogInView *logInView = [[LogInView alloc] init];
+    logInView.delegate = self;
+    [logInView setRootNavigationOnWindow:self.window];
+  }
+
+}
+
+- (void)showMainView {
+  MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
+  [mainView setRootNavigationOnWindow:self.window]; // Sets the main view on the window
+}
+
+- (void)logInViewDidLogIn:(LogInView *)logInView {
+  [self showMainView];
+}
+```
+
 # View Notifications
 
 `YOCView` has the following notifications:
@@ -97,7 +117,7 @@ Then in your view you can push, pop, present, dismiss without worrying about vie
 
 # Example Project
 
-The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/gabriel/YOCView/tree/master/Example). 
+The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/gabriel/YOCView/tree/master/Example).
 
 # FAQ
 
@@ -109,6 +129,6 @@ In your view, `self.viewController` will return the UIViewController it's in.
 
 This allows support for [YOLayout](https://github.com/YOLayout/YOLayout). But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
 
-## But isn't this taking the C out of MVC? 
+## But isn't this taking the C out of MVC?
 
 No.

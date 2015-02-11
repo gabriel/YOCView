@@ -20,8 +20,15 @@
 
 @implementation YOCView
 
-+ (UIViewController *)viewControllerForView:(YOCView *)view {
++ (UIViewController<YONavigation> *)viewControllerForView:(YOCView *)view {
   return [[YOCViewController alloc] initWithView:view];
+}
+
+- (id<YONavigation>)setRootNavigationOnWindow:(UIWindow *)window {
+  UIViewController<YONavigation> *navigation = [YOCView viewControllerForView:self];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:navigation];
+  window.rootViewController = navigationController;
+  return navigation;
 }
 
 - (id<UILayoutSupport>)topLayoutGuide {

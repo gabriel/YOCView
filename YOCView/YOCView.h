@@ -47,8 +47,11 @@ typedef NS_ENUM (NSUInteger, YOCViewOptions) {
 @property (nonatomic) NSString *navigationTitle;
 @property (nonatomic) NSString *navigationBackTitle;
 @property YOCViewOptions viewOptions;
+@property (readonly, getter=isVisible) BOOL visible;
 
-+ (UIViewController *)viewControllerForView:(YOCView *)view;
++ (UIViewController<YONavigation> *)viewControllerForView:(YOCView *)view;
+
+- (id<YONavigation>)setRootNavigationOnWindow:(UIWindow *)window;
 
 - (void)viewWillAppear:(BOOL)animated;
 

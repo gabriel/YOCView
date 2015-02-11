@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "YOCView"
-  s.version      = "0.1.1"
-  s.summary      = "Taking away view controllers."
+  s.version      = "0.1.3"
+  s.summary      = "YOCView helps you avoid UIViewController."
   s.homepage     = "https://github.com/gabriel/YOCView"
   s.license      = "MIT"
   s.authors      = { "Gabriel Handford" => "gabrielh@gmail.com" }
