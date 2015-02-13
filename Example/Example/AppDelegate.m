@@ -18,8 +18,7 @@
   self.window.backgroundColor = [UIColor colorWithWhite:0.1 alpha:1.0];
 
   GHAView *mainView = [[GHAView alloc] init];
-  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[YOCView viewControllerForView:mainView]];
-
+  [mainView setRootNavigationOnWindow:self.window];
   [self.window makeKeyAndVisible];
   return YES;
 }

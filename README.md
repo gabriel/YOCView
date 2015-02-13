@@ -115,20 +115,21 @@ Here is an example of an `AppDelegate` that has a log in and main view.
 - (void)viewDidAppearAfterLoad:(BOOL)animated;
 ```
 
+# Accessing your UIViewController
+
+Sometimes you need to use UIViewControllers for alerts or search displays.
+
+Calling `self.navigation.viewController` will give you access to your view controller.
+
+```objc
+UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"An alert view" preferredStyle:UIAlertControllerStyleAlert];
+[alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+[self.navigation.viewController dismissViewControllerAnimated:YES completion:nil];
+}]];
+[self.navigation.viewController presentViewController:alert animated:YES completion:nil];
+```
+
 # Example Project
 
 The best way to follow and learn `YOCView` is by seeing it in action. Open the example project: [Example](https://github.com/gabriel/YOCView/tree/master/Example).
 
-# FAQ
-
-## What if I need to access the view's UIViewController?
-
-In your view, `self.viewController` will return the UIViewController it's in.
-
-## Why does YOCView subclass YOView?
-
-This allows support for [YOLayout](https://github.com/YOLayout/YOLayout). But you don't have to use it if you don't want. YOLayout doesn't override anything so you can pretend it's just like a UIView.
-
-## But isn't this taking the C out of MVC?
-
-No.

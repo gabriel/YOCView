@@ -80,8 +80,18 @@
     [self.navigation dismissViewAnimated:YES completion:nil];
   };
 
+  GHUITextImageView *presentAlertView = [[GHUITextImageView alloc] init];
+  [presentAlertView setName:@"UIAlertViewController" description:nil image:nil];
+  presentAlertView.action = ^{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"An alert view" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+      [self.navigation.viewController dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self.navigation.viewController presentViewController:alert animated:YES completion:nil];
+  };
+
   [_tableView.dataSource addObjects:@[pushView, popView, popToRootView] section:0];
-  [_tableView.dataSource addObjects:@[presentView, presentSplashView, dismissView] section:1];
+  [_tableView.dataSource addObjects:@[presentView, presentSplashView, dismissView, presentAlertView] section:1];
 
   _tableView.dataSource.selectBlock = ^(UITableView *tableView, NSIndexPath *indexPath, GHUITextImageView *view) {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
