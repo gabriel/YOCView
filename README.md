@@ -3,14 +3,6 @@ YOCView
 
 Simplifying UIView and UIViewController interactions.
 
-# Podfile
-
-```ruby
-pod "YOCView"
-```
-
-# Usage
-
 Instead of making a UIViewController subclass and a UIView subclass, you can create just a YOCView subclass.
 
 ```objc
@@ -117,6 +109,12 @@ Calling `self.navigation.viewController` will give you access to your UIViewCont
 }
 
 @end
+```
+
+# Podfile
+
+```ruby
+pod "YOCView"
 ```
 
 # Example Project
