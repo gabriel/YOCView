@@ -37,6 +37,11 @@ Then within your YOCView you can push, pop, present, dismiss by accessing `self.
 ```objc
 @implementation MyView
 
+- (void)viewDidLoadWithLayout {
+  [super viewDidLoadWithLayout];
+  self.navigationTitle = @"Title";
+}
+
 - (void)pushAView {
   MyView *view = [[MyView alloc] init];
   [self.navigation pushView:view animated:YES];
