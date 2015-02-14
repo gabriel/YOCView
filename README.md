@@ -1,7 +1,7 @@
 YOCView
 =========
 
-YOCView helps you avoid view controllers. A view controller in UIKit is a wrapper around a single view that provides notifications (appear, disappear, etc) and some state (orientation, navigation item, etc). Because of this extra layer, it can cause you to write a lot of delegate and callback code in order to coordinate between views. YOCView help to eliminate this view controller layer.
+YOCView helps you avoid dealing with UIViewController. This can help avoid unnecessary delegate and callback boilerplate.
 
 # Podfile
 
@@ -11,7 +11,7 @@ pod "YOCView"
 
 # Usage
 
-Instead of making a view controller with a content view, just create your content view by subclassing YOCView.
+Instead of making a UIViewController with a UIView, you can create a view and subclass YOCView (skipping the UIViewController step).
 
 ```objc
 #import <YOCView/YOCView.h>
@@ -20,7 +20,7 @@ Instead of making a view controller with a content view, just create your conten
 @end
 ```
 
-Then within your view you can push, pop, present, dismiss without worrying about view controllers.
+Then within your view you can push, pop, present, dismiss without worrying about UIViewController.
 
 ```objc
 @implementation MyView
@@ -117,7 +117,7 @@ Here is an example of an `AppDelegate` that has a log in and main view.
 
 # Accessing your UIViewController
 
-Sometimes you need to use UIViewControllers for alerts or search displays.
+Sometimes you need to acces the UIViewControllers for things like alerts or search displays.
 
 Calling `self.navigation.viewController` will give you access to your view controller.
 
