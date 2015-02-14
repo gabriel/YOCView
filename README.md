@@ -3,7 +3,7 @@ YOCView
 
 Simplifying UIView and UIViewController interactions.
 
-Instead of making a UIViewController subclass and a UIView subclass, you can create just a YOCView subclass.
+Instead of making a UIViewController subclass and a UIView subclass, you create a YOCView subclass.
 
 ```objc
 #import <YOCView/YOCView.h>
