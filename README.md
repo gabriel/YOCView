@@ -1,8 +1,6 @@
 YOCView
 =========
 
-YOCView helps you avoid dealing with UIViewController's when all they're doing is creating a bunch of delegate and callback boilerplate when coordinating between views.
-
 # Podfile
 
 ```ruby
@@ -11,7 +9,7 @@ pod "YOCView"
 
 # Usage
 
-Instead of making a UIViewController with a UIView, you can create just a view and subclass YOCView (skipping the UIViewController step).
+Instead of making a UIViewController subclass and a UIView subclass, you can create just a YOCView subclass.
 
 ```objc
 #import <YOCView/YOCView.h>
@@ -20,7 +18,19 @@ Instead of making a UIViewController with a UIView, you can create just a view a
 @end
 ```
 
-Then within your view you can push, pop, present, dismiss without worrying about UIViewController.
+
+To create a view controller use: `[YOCViewController viewControllerForView:view];`. For example in your AppDelegate you might do:
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
+  UIViewController *viewController = [YOCView viewControllerForView:mainView];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+  self.window.rootViewController = navigationController;
+}
+```
+
+Then within your YOCView you can push, pop, present, dismiss by accessing `self.navigation`.
 
 ```objc
 @implementation MyView
@@ -56,20 +66,9 @@ Then within your view you can push, pop, present, dismiss without worrying about
 @end
 ```
 
-In order for YOCView to work, you'll need to create the view controller using `YOCView viewControllerForView:` as the root:
-
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
-  UIViewController *viewController = [YOCView viewControllerForView:mainView];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-  self.window.rootViewController = navigationController;
-}
-```
-
 # View Notifications
 
-`YOCView` has the following notifications:
+`YOCView` also gets the following notifications:
 
 ```objc
 // Same as UIViewController notifications
@@ -96,9 +95,7 @@ In order for YOCView to work, you'll need to create the view controller using `Y
 
 # Accessing your UIViewController
 
-Sometimes you need to acces the UIViewControllers for things like alerts or search displays.
-
-Calling `self.navigation.viewController` will give you access to your view controller.
+Calling `self.navigation.viewController` will give you access to your UIViewController.
 
 ```objc
 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"An alert view" preferredStyle:UIAlertControllerStyleAlert];
