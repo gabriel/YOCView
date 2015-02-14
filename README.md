@@ -43,12 +43,12 @@ Then within your YOCView you can push, pop, present, dismiss by accessing `self.
 }
 
 - (void)pushAView {
-  MyView *view = [[MyView alloc] init];
+  AnotherView *view = [[AnotherView alloc] init];
   [self.navigation pushView:view animated:YES];
 }
 
 - (void)presentAView {
-  MyView *view = [[MyView alloc] init];
+  AnotherView *view = [[AnotherView alloc] init];
   [self.navigation presentView:view animated:YES];
 }
 
@@ -65,7 +65,7 @@ Then within your YOCView you can push, pop, present, dismiss by accessing `self.
 }
 
 - (void)pushAViewHideNav {
-  MyView *view = [[MyView alloc] init];
+  AnotherView *view = [[AnotherView alloc] init];
   view.viewOptions = YOCViewOptionsHideNavigation;
   [self.navigation pushView:view animated:YES];
 }
