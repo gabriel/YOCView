@@ -102,14 +102,21 @@ Then within your YOCView you can push, pop, present, dismiss by accessing `self.
 
 # Accessing your UIViewController
 
-Calling `self.navigation.viewController` will give you access to your UIViewController.
+Calling `self.navigation.viewController` will give you access to your UIViewController. For example, to show an alert:
 
 ```objc
-UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"An alert view" preferredStyle:UIAlertControllerStyleAlert];
-[alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-[self.navigation.viewController dismissViewControllerAnimated:YES completion:nil];
-}]];
-[self.navigation.viewController presentViewController:alert animated:YES completion:nil];
+
+@implementation MyView
+
+- (void)showAlert {
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"An alert view" preferredStyle:UIAlertControllerStyleAlert];
+  [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [self.navigation.viewController dismissViewControllerAnimated:YES completion:nil];
+  }]];
+  [self.navigation.viewController presentViewController:alert animated:YES completion:nil];
+}
+
+@end
 ```
 
 # Example Project
