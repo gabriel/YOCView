@@ -56,11 +56,13 @@ Then within your view you can push, pop, present, dismiss without worrying about
 @end
 ```
 
-To make a view the content for a window you can use `setRootNavigationOnWindow:`.
+To make a view the content for a window you can use `:`.
 
 ```objc
 MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
-[mainView setRootNavigationOnWindow:self.window]; // Sets the main view on the window
+UIViewController *viewController = [YOCView viewControllerForView:mainView];
+UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+self.window.rootViewController = navigationController;
 ```
 
 Here is an example of an `AppDelegate` that has a log in and main view.
