@@ -36,6 +36,10 @@
   return self;
 }
 
++ (YOCViewController *)viewControllerForView:(YOCView *)view {
+  return [[YOCViewController alloc] initWithView:view];
+}
+
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
 }

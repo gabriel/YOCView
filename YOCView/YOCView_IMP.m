@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 YOLayout. All rights reserved.
 //
 
-#import "YOCView.h"
+#import "YOCView_IMP.h"
 
 #import "YOCViewController.h"
 
@@ -20,15 +20,11 @@
 
 @implementation YOCView
 
-+ (UIViewController<YONavigation> *)viewControllerForView:(YOCView *)view {
-  return [[YOCViewController alloc] initWithView:view];
-}
-
-- (id<YONavigation>)setRootNavigationOnWindow:(UIWindow *)window {
-  UIViewController<YONavigation> *navigation = [YOCView viewControllerForView:self];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:navigation];
+- (YOCViewController *)setViewControllerOnWindow:(UIWindow *)window {
+  YOCViewController *viewController = [YOCViewController viewControllerForView:self];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
   window.rootViewController = navigationController;
-  return navigation;
+  return viewController;
 }
 
 - (id<UILayoutSupport>)topLayoutGuide {

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0017121F1A8F3C9C00C7AD58 /* YONavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0017121D1A8F3C9C00C7AD58 /* YONavigation.h */; };
+		001712231A8F3D8D00C7AD58 /* YOCView_IMP.h in Headers */ = {isa = PBXBuildFile; fileRef = 001712211A8F3D8D00C7AD58 /* YOCView_IMP.h */; };
+		001712241A8F3D8D00C7AD58 /* YOCView_IMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 001712221A8F3D8D00C7AD58 /* YOCView_IMP.m */; };
 		003BAAE71A80945F00C309B9 /* YOCView.h in Headers */ = {isa = PBXBuildFile; fileRef = 003BAAE51A80945F00C309B9 /* YOCView.h */; };
-		003BAAE81A80945F00C309B9 /* YOCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 003BAAE61A80945F00C309B9 /* YOCView.m */; };
 		00E64C121A8AD54C00CACF44 /* YOCViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E64C101A8AD54C00CACF44 /* YOCViewController.h */; };
 		00E64C131A8AD54C00CACF44 /* YOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E64C111A8AD54C00CACF44 /* YOCViewController.m */; };
 		3F99B66C4B8EAFBE7CB6A30D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED265C5187FAF2AE06617F1 /* libPods.a */; };
@@ -16,10 +18,12 @@
 
 /* Begin PBXFileReference section */
 		0004F0EB1A8B1BDD00CFCA23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0017121D1A8F3C9C00C7AD58 /* YONavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YONavigation.h; sourceTree = "<group>"; };
+		001712211A8F3D8D00C7AD58 /* YOCView_IMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOCView_IMP.h; sourceTree = "<group>"; };
+		001712221A8F3D8D00C7AD58 /* YOCView_IMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOCView_IMP.m; sourceTree = "<group>"; };
 		003BAAC91A80941600C309B9 /* YOCView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YOCView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		003BAACD1A80941600C309B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003BAAE51A80945F00C309B9 /* YOCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOCView.h; sourceTree = "<group>"; };
-		003BAAE61A80945F00C309B9 /* YOCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOCView.m; sourceTree = "<group>"; };
 		00B543FF1A82B0780044CC5B /* YOCView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = YOCView.podspec; sourceTree = "<group>"; };
 		00B544001A82B0780044CC5B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		00E64C101A8AD54C00CACF44 /* YOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOCViewController.h; sourceTree = "<group>"; };
@@ -66,9 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				003BAAE51A80945F00C309B9 /* YOCView.h */,
-				003BAAE61A80945F00C309B9 /* YOCView.m */,
+				001712211A8F3D8D00C7AD58 /* YOCView_IMP.h */,
+				001712221A8F3D8D00C7AD58 /* YOCView_IMP.m */,
 				00E64C101A8AD54C00CACF44 /* YOCViewController.h */,
 				00E64C111A8AD54C00CACF44 /* YOCViewController.m */,
+				0017121D1A8F3C9C00C7AD58 /* YONavigation.h */,
 				003BAACC1A80941600C309B9 /* Supporting Files */,
 			);
 			path = YOCView;
@@ -107,6 +113,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				003BAAE71A80945F00C309B9 /* YOCView.h in Headers */,
+				0017121F1A8F3C9C00C7AD58 /* YONavigation.h in Headers */,
+				001712231A8F3D8D00C7AD58 /* YOCView_IMP.h in Headers */,
 				00E64C121A8AD54C00CACF44 /* YOCViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E64C131A8AD54C00CACF44 /* YOCViewController.m in Sources */,
-				003BAAE81A80945F00C309B9 /* YOCView.m in Sources */,
+				001712241A8F3D8D00C7AD58 /* YOCView_IMP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +321,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = YOViewController/Info.plist;
+				INFOPLIST_FILE = YOCView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = YOCView;
@@ -329,7 +337,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = YOViewController/Info.plist;
+				INFOPLIST_FILE = YOCView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = YOCView;

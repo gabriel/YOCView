@@ -17,4 +17,6 @@
 
 - (id)initWithView:(YOCView *)view;
 
++ (YOCViewController *)viewControllerForView:(YOCView *)view;
+
 @end
