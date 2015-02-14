@@ -1,7 +1,7 @@
 YOCView
 =========
 
-YOCView helps you avoid dealing with UIViewController's when they're doing is creating a bunch of delegate and callback boilerplate when coordinating between views.
+YOCView helps you avoid dealing with UIViewController's when all they're doing is creating a bunch of delegate and callback boilerplate when coordinating between views.
 
 # Podfile
 
