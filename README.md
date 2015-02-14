@@ -1,6 +1,8 @@
 YOCView
 =========
 
+Simplifying UIView and UIViewController interactions.
+
 # Podfile
 
 ```ruby
