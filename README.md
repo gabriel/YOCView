@@ -1,7 +1,7 @@
 YOCView
 =========
 
-YOCView helps you avoid dealing with UIViewController. This can help avoid unnecessary delegate and callback boilerplate.
+YOCView helps you avoid dealing with UIViewController's when they're doing is creating a bunch of delegate and callback boilerplate when coordinating between views.
 
 # Podfile
 
@@ -11,7 +11,7 @@ pod "YOCView"
 
 # Usage
 
-Instead of making a UIViewController with a UIView, you can create a view and subclass YOCView (skipping the UIViewController step).
+Instead of making a UIViewController with a UIView, you can create just a view and subclass YOCView (skipping the UIViewController step).
 
 ```objc
 #import <YOCView/YOCView.h>
@@ -56,37 +56,14 @@ Then within your view you can push, pop, present, dismiss without worrying about
 @end
 ```
 
-To make a view the content for a window you can use `:`.
-
-```objc
-MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
-UIViewController *viewController = [YOCView viewControllerForView:mainView];
-UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-self.window.rootViewController = navigationController;
-```
-
-Here is an example of an `AppDelegate` that has a log in and main view.
+In order for YOCView to work, you'll need to create the view controller using `YOCView viewControllerForView:` as the root:
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-  if (loggedIn) {
-    [self showMainView];
-  } else {
-    LogInView *logInView = [[LogInView alloc] init];
-    logInView.delegate = self;
-    [logInView setRootNavigationOnWindow:self.window];
-  }
-
-}
-
-- (void)showMainView {
   MainView *mainView = [[MainView alloc] init]; // Subclasses YOCView
-  [mainView setRootNavigationOnWindow:self.window]; // Sets the main view on the window
-}
-
-- (void)logInViewDidLogIn:(LogInView *)logInView {
-  [self showMainView];
+  UIViewController *viewController = [YOCView viewControllerForView:mainView];
+  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+  self.window.rootViewController = navigationController;
 }
 ```
 
