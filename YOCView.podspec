@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YOCView"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "Simplifying UIView and UIViewController interactions."
   s.homepage     = "https://github.com/gabriel/YOCView"
   s.license      = "MIT"
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency "YOLayout", "~> 0.1.3"
+  s.dependency "YOLayout"
 
   s.ios.platform = :ios, "7.0"
   s.ios.deployment_target = "7.0"

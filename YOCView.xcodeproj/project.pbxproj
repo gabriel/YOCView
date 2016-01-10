@@ -13,7 +13,7 @@
 		003BAAE71A80945F00C309B9 /* YOCView.h in Headers */ = {isa = PBXBuildFile; fileRef = 003BAAE51A80945F00C309B9 /* YOCView.h */; };
 		00E64C121A8AD54C00CACF44 /* YOCViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E64C101A8AD54C00CACF44 /* YOCViewController.h */; };
 		00E64C131A8AD54C00CACF44 /* YOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E64C111A8AD54C00CACF44 /* YOCViewController.m */; };
-		3F99B66C4B8EAFBE7CB6A30D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED265C5187FAF2AE06617F1 /* libPods.a */; };
+		B98EB8151274FF1010ABA4B8 /* libPods-YOCView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247A4E9B6CE0B9175FB27A5A /* libPods-YOCView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		00B544001A82B0780044CC5B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		00E64C101A8AD54C00CACF44 /* YOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOCViewController.h; sourceTree = "<group>"; };
 		00E64C111A8AD54C00CACF44 /* YOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOCViewController.m; sourceTree = "<group>"; };
-		654B5D7729D0C78B5F374656 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E43A6B47F1D676EBA4E19432 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FED265C5187FAF2AE06617F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22793229FD2C19B33300F6A7 /* Pods-YOCView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOCView.release.xcconfig"; path = "Pods/Target Support Files/Pods-YOCView/Pods-YOCView.release.xcconfig"; sourceTree = "<group>"; };
+		247A4E9B6CE0B9175FB27A5A /* libPods-YOCView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YOCView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AD397F6BB8C96312FD0D4C /* Pods-YOCView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YOCView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YOCView/Pods-YOCView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F99B66C4B8EAFBE7CB6A30D /* libPods.a in Frameworks */,
+				B98EB8151274FF1010ABA4B8 /* libPods-YOCView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +53,8 @@
 				00B544001A82B0780044CC5B /* Podfile */,
 				003BAACB1A80941600C309B9 /* YOCView */,
 				003BAACA1A80941600C309B9 /* Products */,
-				030A399BF1CAE6E379E56BEE /* Pods */,
-				25075DC6F0D8114FFC883A26 /* Frameworks */,
+				D46A33B0B5B171C8E3C8BCB4 /* Pods */,
+				98961B7AEB6C6CC8E0223C69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,21 +88,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		030A399BF1CAE6E379E56BEE /* Pods */ = {
+		98961B7AEB6C6CC8E0223C69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				654B5D7729D0C78B5F374656 /* Pods.debug.xcconfig */,
-				E43A6B47F1D676EBA4E19432 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		25075DC6F0D8114FFC883A26 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FED265C5187FAF2AE06617F1 /* libPods.a */,
+				247A4E9B6CE0B9175FB27A5A /* libPods-YOCView.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D46A33B0B5B171C8E3C8BCB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD397F6BB8C96312FD0D4C /* Pods-YOCView.debug.xcconfig */,
+				22793229FD2C19B33300F6A7 /* Pods-YOCView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,12 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 003BAADF1A80941600C309B9 /* Build configuration list for PBXNativeTarget "YOCView" */;
 			buildPhases = (
-				EA14E8F6F0717FD072B569AC /* Check Pods Manifest.lock */,
+				81C3FAD5F694451CFB6E24D3 /* Check Pods Manifest.lock */,
 				003BAAC41A80941600C309B9 /* Sources */,
 				003BAAC51A80941600C309B9 /* Frameworks */,
 				003BAAC61A80941600C309B9 /* Headers */,
 				003BAAC71A80941600C309B9 /* Resources */,
-				9687560AF2EAEA6C8F21A341 /* Copy Pods Resources */,
+				134431CC76CACD2873482F3C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,7 +184,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9687560AF2EAEA6C8F21A341 /* Copy Pods Resources */ = {
+		134431CC76CACD2873482F3C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,10 +196,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YOCView/Pods-YOCView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA14E8F6F0717FD072B569AC /* Check Pods Manifest.lock */ = {
+		81C3FAD5F694451CFB6E24D3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,7 +315,7 @@
 		};
 		003BAAE01A80941600C309B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 654B5D7729D0C78B5F374656 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F0AD397F6BB8C96312FD0D4C /* Pods-YOCView.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,7 +331,7 @@
 		};
 		003BAAE11A80941600C309B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E43A6B47F1D676EBA4E19432 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 22793229FD2C19B33300F6A7 /* Pods-YOCView.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
