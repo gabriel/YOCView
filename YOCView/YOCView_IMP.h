@@ -23,7 +23,7 @@ typedef NS_ENUM (NSUInteger, YOCViewOptions) {
   YOCViewOptionsHideNavigation = 1 << 1,
 };
 
-@interface YOCView : YOBox
+@interface YOCView : YOView
 
 @property (weak) id<YONavigation> navigation;
 @property (nonatomic) NSString *navigationTitle;
