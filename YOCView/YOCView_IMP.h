@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 #import <YOLayout/YOLayout.h>
+#import <YOLayout/YOBox.h>
 
 #import "YONavigation.h"
 
@@ -22,7 +23,7 @@ typedef NS_ENUM (NSUInteger, YOCViewOptions) {
   YOCViewOptionsHideNavigation = 1 << 1,
 };
 
-@interface YOCView : YOView
+@interface YOCView : YOBox
 
 @property (weak) id<YONavigation> navigation;
 @property (nonatomic) NSString *navigationTitle;

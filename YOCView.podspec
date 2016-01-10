@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YOCView"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "Simplifying UIView and UIViewController interactions."
   s.homepage     = "https://github.com/gabriel/YOCView"
   s.license      = "MIT"
